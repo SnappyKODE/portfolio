@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+header{
+    background: transparent;
+    position: absolute;
+    z-index: 2;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+.section{
+    height: 100vh;
+    background-size: cover;
+    z-index: 1;
+}
+
+.sec1{
+    background-image: url('./image/bg_1.jpg');
+}
+.sec2{
+    background-image: url('./image/bg_2.jpg');
+}
+.sec3{
+    background-image: url('./image/bg_3.jpg');
+}
+
+.content{
+    position: relative;
+    top: 60%;
+    left: 4%;
+    color: #ffffff;
+    height: 160px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    animation:  up 2s;
+}
+
+@keyframes up{
+    from{
+        top: 90%;
+    }
+    to{
+        top: 60%;
+    }
+}
+
+.content p{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.content h1{
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.box{
+    padding: 15px 20px;
+    border: 2px solid white;
+    width: 130px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background: 
+    linear-gradient(white 0 0) 
+    var(--p, 0) 100% /var(--d, 0) 50px
+    no-repeat;
+    transition: 0.3s, background-position 0s 0.3s ;
+}
+
+.box:hover {
+    --d: 100%;
+    --p: 100%;
+    color: black;
+}
+
+.logo{
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.nav{
+    display: flex;
+    gap: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav a{
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+
+.basic-4 a{
+    background: 
+        linear-gradient(currentColor 0 0) 
+        var(--p, 0) 100% /var(--d, 0) 1px 
+        no-repeat;
+    transition: 0.3s, background-position 0s 0.3s;
+}
+.basic-4 a:hover {
+    --d: 100%;
+    --p: 100%;
+}
+
+.nav-links{
+    margin-left: 180px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.nav-links a{
+    margin-right: 20px;
+}
+
+.pop span {
+    position: relative;
+    z-index: 4;
+}
+
+.pop-menu{
+    background-color: black;
+    color: #ffffff;
+    text-align: right;
+    height: 75vh;
+    width: 20vw;
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: -20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 100px 40px;
+    font-weight: 400;
+}
+
+.pop-menu hr{
+    border-color: rgba(255, 255, 255, 0.185);
+}
+
+.hide{
+    display: none;
+}
+
+footer{
+    background-color: black;
+    color: #ffffff;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    font-size: 0.75rem;
+}
+
+.section .material-symbols-outlined {
+    color: #ffffff;
+    font-size: 60px;
+    position: relative;
+    top: 63vh;
+    left: 48%;
+    animation: fadeArrow 2s linear infinite forwards;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 150,
+    'GRAD' 0,
+    'opsz' 40
+}
+
+.nav-links .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+@keyframes fadeArrow{
+    0%{
+        opacity: 0;
+        margin-top: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+        margin-top: 8px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 500px) and (orientation:portrait) {
+    .section{
+        background-position: center;
+    }
+    .sec1{
+        background-image: url('./image/bg_1_mobile.jpg');
+    }
+    .sec2{
+        background-image: url('./image/bg_2_mobile.jpg');
+    }
+    .sec3{
+        background-image: url('./image/bg_3_mobile.jpg');
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .content{
+        position: relative;
+        top: 65%;
+        left: 4%;
+        color: #ffffff;
+        height: auto;
+        width: auto;
+        font-size: 0.6rem;
+    }
+    .logo{
+        height: 160px;
+        margin-bottom: 10px;
+    }
+    .nav-links{
+        margin-left: 50px;
+    }
+}
+.shadow{
+    filter: grayscale(60%) blur(2px);
+}

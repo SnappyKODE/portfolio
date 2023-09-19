@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Tip calculator app</title>
+
+</head>
+<body>
+  <div id="logo">
+    <img  src="./images/logo.svg" alt="">
+  </div>
+  <div class="main">
+    <div class="input">
+
+      <div class="bill_amt">
+        <label>Bill</label>
+        <br>
+        <div>
+          <img class="symbol" src="./images/icon-dollar.svg" alt="">
+        <input placeholder="0 " >
+        </div>
+        
+      </div>
+      
+      <div class="tip_per">
+        <label>Select Tip %</label>
+        <div>
+          <button class="tip" value="5">5%</button>
+          <button class="tip" value="10">10%</button>
+          <button class="tip" value="15">15%</button>
+          <button class="tip" value="25">25%</button>
+          <button class="tip" value="50">50%</button>
+          <input id="custom" class="tip" placeholder="CUSTOM">
+        </div>
+      </div>
+      
+      <div class="people_count">
+        <label>Number of People</label>
+        <label id="error">Can't be zero</label>
+        <br>
+        <div>
+          <img class="symbol" src="./images/icon-person.svg" alt="">
+          <input placeholder="0 " >
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="output">
+      <div class="tip_out">
+        <p>Tip Amount</p>
+        <p id="xs">/ person</p>
+      </div>
+      <div>
+        <h1 id="tip_amount">
+          $0.00
+        </h1>
+      </div>
+      <div class="amt_out">
+        <p>Total</p>
+        <p id="xs">/ person</p>
+      </div>
+      <div>
+        <h1 id="total_tip">
+          $0.00
+        </h1>
+      </div>
+      
+      <button id="reset">Reset</button>
+    </div>
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>

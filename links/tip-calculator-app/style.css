@@ -1,0 +1,169 @@
+*{
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main{
+    background-color: white;
+    width: 45%;
+    height: auto;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.tip_per div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+label{
+    font-size: 0.78rem;
+    color: hsl(186, 14%, 43%);
+}
+
+#error{
+    color: rgba(243, 23, 23, 0.685);
+    font-size: 0.7rem;
+    margin-left: 55px;
+    display: none;
+}
+
+.error_border{
+    outline: 2px solid rgba(243, 23, 23, 0.685);
+}
+
+.symbol{
+    position: absolute;
+    background-color: hsl(180, 26%, 95%);
+    height: 12px;
+    margin-left: 10px;
+}
+
+.bill_amt div, .people_count div{
+    display: flex;
+    align-items: center;
+}
+
+.bill_amt input, .people_count input{
+    text-align: right;
+    width: 100%;
+    height: 30px;
+    background-color: hsl(180, 26%, 95%);
+    border: none;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+}
+
+.tip{
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    color: white;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#custom{
+    background-color: hsl(180, 26%, 95%);
+    width: 92px;
+    text-align: center;
+    color: hsl(183, 100%, 15%);
+}
+
+.output{
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    row-gap: 20px;
+}
+
+.output p{
+    color: white;
+    font-size: 0.8rem;
+}
+
+#xs{
+    font-size: 0.65rem;
+    color: hsla(180, 28%, 95%, 0.74);
+}
+
+h1{
+    color: hsl(172, 67%, 45%);
+    text-align: right;
+    font-size: 2.2rem;
+}
+
+.tip_out , .amt_out {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#reset{
+    margin-top: 40px;
+    grid-column: span 2;
+    height: 40px;
+    border: none;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(183, 91%, 23%);
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+.tip:focus,#reset:hover{
+    background-color:  hsl(184, 65%, 44%);
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+
+.bill_amt input:focus, .people_count input:focus ,#custom:focus{
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+@media screen and (max-width: 420px) and (orientation:portrait) {
+    body{
+        margin-top: 80px;
+    }
+    .main{
+        width: 80%;
+        height: auto;
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+    .bill_amt input, .people_count input{
+        width: 100%;
+        height: 45px;
+    }
+    .tip{
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+
+
