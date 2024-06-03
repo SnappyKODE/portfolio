@@ -138,7 +138,7 @@ h4{
     z-index: 2;
 }
 
-.blur{
+.blur,.bb{
     background-color: rgba(0, 0, 0, 0.575);
     position: absolute;
     z-index: 3;
@@ -155,13 +155,20 @@ h4{
     font-size: 20px;
 }
 
-.blur button{
+
+
+.blur button , .bb button{
     height: 30px;
     width: 60px;
     margin-top: 15px;
     border: none;
     border-radius: 50px;
     cursor: url('./cur1054.cur'),default;
+}
+
+.bb button:hover{
+    border: 2px solid black;
+    box-shadow: 0px 0px 5px 2px white;
 }
 
 .blur button:hover{
@@ -292,8 +299,8 @@ h4{
     }
 
     .main h2{
-        font-size: 55px;
-        padding-left: 35px;
+        font-size: 60px;
+        padding-left: 40px;
     }
     
     .main p{
